@@ -2,9 +2,13 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+
 const API_URL = "https://rave-map-backend-server.adaptable.app/clubs";
 
 function CreateClub() {
+
+  const [club, setClub]= useState("");
+  
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [musicStyle, setMusicStyle] = useState("");
@@ -13,7 +17,7 @@ function CreateClub() {
   const [imageURL, setImageURL] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => { 
     e.preventDefault();
 
     const createClubBox = { name, location, musicStyle, googleMap, hint, imageURL };
@@ -21,12 +25,22 @@ function CreateClub() {
       .post(API_URL, createClubBox)
       .then((response) => {
         console.log("Club added successfully!");
+        handleClubAdded(createClubBox);
+        setClub([createClubBox, ...club]);
+        
+
+        
         navigate("/clubs"); 
       })
       .catch((error) => {
         console.error("Error adding club:", error);
       });
   };
+
+const handleClubAdded= (newClub) => {
+  setClub([newClub,...club]);
+};
+
 
   return (
     <div className="CreateClub">
@@ -85,8 +99,12 @@ function CreateClub() {
 
         <button type="submit">ADD</button>
       </form>
+      
+     
     </div>
   );
+
+ 
 }
 
 export default CreateClub;

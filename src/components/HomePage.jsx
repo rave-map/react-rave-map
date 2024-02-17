@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Route, Routes } from 'react-router-dom'
 import CreateClub from "./CreateClub";
 
+
 function HomePage() {
   return (
     <div className="HomePage">
@@ -14,6 +15,7 @@ function HomePage() {
       <Link to="/createclub">
         <button>Create Club</button>
       </Link>
+     
 
     </div>
   );

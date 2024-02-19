@@ -2,18 +2,22 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
+
+
  function EditClubList(){
     const API_URL= "https://rave-map-backend-server.adaptable.app/clubs"
+
+    const { id } = useParams();
+    const navigate = useNavigate();
 
     const [name, setName] = useState("");
     const [location, setLocation] = useState("");
     const [musicStyle, setMusicStyle] = useState("");
 
-    const { clubId } = useParams();
-    const navigate = useNavigate();
+
 
     useEffect(() => {
-        axios.get(`${API_URL}/clubs/${clubId}`)
+        axios.get(`${API_URL}/${id}`)
             .then((response) => {
                 setName(response.data.name);
                 setLocation(response.data.location);
@@ -23,7 +27,7 @@ import { useNavigate, useParams } from "react-router-dom";
                 console.log("Error getting club details from the API...");
                 console.log(error);
             });
-    }, [clubId]);
+    }, [id]);
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -33,9 +37,9 @@ import { useNavigate, useParams } from "react-router-dom";
             musicStyle: musicStyle
         };
 
-        axios.put(`${API_URL}/clubs/${clubId}`, updatedDetails)
+        axios.put(`${API_URL}/${id}`, updatedDetails)
             .then((response) => {
-                navigate(`/clubs/${clubId}`);
+                navigate(`/clubs`);
             })
             .catch((error) => {
                 console.log("Error updating club...");
@@ -43,7 +47,7 @@ import { useNavigate, useParams } from "react-router-dom";
             });
     };
 
-    const deleteClub = () => {
+    /*const deleteClub = () => {
         axios.delete(`${API_URL}/clubs/${clubId}`)
             .then((response) => {
                 navigate("/clubs");
@@ -52,7 +56,7 @@ import { useNavigate, useParams } from "react-router-dom";
                 console.log("Error deleting club...");
                 console.log(error);
             });
-    };
+    };*/
 
     return (
         <div className="EditClubPage">
@@ -81,9 +85,9 @@ import { useNavigate, useParams } from "react-router-dom";
                 />
                 <button type="submit">Update Club</button>
             </form>
-            <button onClick={deleteClub}>Delete Club</button>
+            
         </div>
     );
 }
 
-export default EditClubPage;
+export default EditClubList;

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';  
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function Search() {
   const [clubs, setClubs] = useState([]);
@@ -27,31 +29,29 @@ function Search() {
 
   return (
     <div>
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Search for a club..."
-      />
-      <button onClick={handleSearch}>Search</button>
-
-      <div className="clubList">
-        {searchResult.length > 0 ? (
-          
-          searchResult.map((club) => (
-            <div className="Club box" key={club.id}>
-              <Link to={`/clubs/${club.id}`}>
-                <h3>{club.name}</h3>
-              </Link>
-            </div>
-          ))
-        ) : (
-          
-          <p>No results found.</p>
-        )}
+      <div className='search-bar'>
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Search for a club..."
+        />
+        <button className='search-btn' onClick={handleSearch}>
+          <FontAwesomeIcon icon={faSearch} />
+        </button>
+      </div>
+      <div className="clubList" style={{ position: 'absolute', top: '70px', left: 0, right: 0 }}>
+        {searchResult.map((club) => (
+          <div className="Club box" key={club.id}>
+            <Link to={`/clubs/${club.id}`}>
+              <h3>{club.name}</h3>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
 
+      
 export default Search;

@@ -1,11 +1,16 @@
 import React from "react";
 import Search from "./Search"; 
+import { Link } from "react-router-dom";
+
 
 function NavBar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        {/* Your logo component or content */}
+      <Link to="/">
+          <img src="bear-logo.png" alt="Logo" />
+        </Link>
+
       </div>
       <div className="search-bar">
         {/* Render the Search component */}

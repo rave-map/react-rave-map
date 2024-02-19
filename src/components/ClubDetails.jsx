@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 
 
@@ -8,23 +8,18 @@ function ClubDetails() {
 
     const API_URL = "https://rave-map-backend-server.adaptable.app/clubs";
 
-    const { clubId } = useParams();
+    const { id } = useParams();
 
     const [club, setClub] = useState(null);
 
-    const getClub = () => {
-        axios.get(`${API_URL}/${clubId}`)
-            .then((response) => {
-                setClub(response.data);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
-
     useEffect(() => {
-        getClub();
-    }, [clubId]);
+    if (id) {
+      axios
+        .get(`${API_URL}/${id}`)
+        .then((response) => setClub(response.data))
+        .catch((error) => console.log(error));
+    }
+  }, [id]);
 
     return (
         <div className="ClubDetails">
@@ -47,5 +42,6 @@ function ClubDetails() {
         </div>
     );
 }
+export default ClubDetails; 
 
-export default ClubDetails;
+

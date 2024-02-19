@@ -9,12 +9,12 @@ import ClubDetails from "./components/ClubDetails";
 function App() {
   return (
     <div className="App">
-        <NavBar/>
+       <NavBar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/clubs" element={<ClubList />} />
         <Route path="/createclub" element={<CreateClub />} />
-        <Route path="/clubs/:clubId" component={ClubDetails} />
+        <Route path="/clubs/:id" element={<ClubDetails/>} />
       </Routes>
     </div>
   )

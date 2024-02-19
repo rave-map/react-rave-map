@@ -1,31 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
+import Search from "./Search"; 
 
-function NavBar({ onSearch }) {
-  const [query, setQuery] = useState("");
-
-  const handleInputChange = (event) => {
-    setQuery(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    onSearch(query);
-  };
-
+function NavBar() {
   return (
     <nav className="navbar">
       <div className="logo">
+        {/* Your logo component or content */}
       </div>
       <div className="search-bar">
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search..."
-            value={query}
-            onChange={handleInputChange}
-          />
-          <button type="submit">Search</button>
-        </form>
+        {/* Render the Search component */}
+        <Search />
       </div>
       <div className="menu">
         {/* Your menu items */}

@@ -18,6 +18,7 @@ function ClubList(props) {
   useEffect(() => {
     getAllClubs();
   }, []);
+  
 
   return (
     <div className="clubList">
@@ -31,7 +32,7 @@ function ClubList(props) {
         </div>
         
       ))}
-      <ClubDetails />
+  
     </div>
   );
 }

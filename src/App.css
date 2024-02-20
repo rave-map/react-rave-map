@@ -1,4 +1,7 @@
-/* Reset default margin and padding */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 body,
 h1,
 h2,
@@ -8,8 +11,11 @@ ul,
 li {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
+h1 {
 
+}
 
 /* Body styles with background image */
 body {
@@ -18,6 +24,7 @@ body {
   background-image: url('/bg.JPG');
   background-size: cover;
   background-position: center;
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Navbar styles */
@@ -149,4 +156,13 @@ button:hover {
 
 .show-search-list .search-bar input {
   transform: translateY(30px); /* Adjust to move the input down */
+}
+
+h1 {
+  position: absolute; /* Position the h1 absolutely */
+  top: 160px; /* Align the h1 closer to the top */
+  left: 50%; /* Align the h1 to the center horizontally */
+  transform: translateX(-50%); /* Adjust to center horizontally */
+  margin: 0; /* Remove default margin */
+  font-size: 24px;
 }

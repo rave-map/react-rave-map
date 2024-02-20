@@ -7,7 +7,7 @@ import CreateClub from "./CreateClub";
 function HomePage() {
   return (
     <div className="HomePage">
-      <h1>Welcome to the Rave Map</h1>
+      <h1>Find Rave</h1>
       
       <Link to="/clubs">
         <button>Club List</button>

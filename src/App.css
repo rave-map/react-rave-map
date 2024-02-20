@@ -75,17 +75,17 @@ body {
   }
   
   .buttons {
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 25px; /* Adjust as needed */
   }
   
-  /* Optional: Adjust button styles */
+
   button {
     margin: 0 10px;
-    padding: 10px 20px;
+    padding: 15px 20px;
   }
   
 
 .search-btn:hover {
-  background-color: #6c1111;
+  background-color: #7f1111;
 }
 

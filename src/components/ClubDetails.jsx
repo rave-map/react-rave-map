@@ -42,6 +42,7 @@ function ClubDetails() {
     };
 
     return (
+        <div className="container d-flex justify-content-center align-items-center" style={{ height: '500px' }} >
         <div className="ClubDetails">
             {club === null
                 ? <p>Loading...</p>
@@ -56,7 +57,7 @@ function ClubDetails() {
 
                         <button onClick={deleteClub}>Delete Club</button>
                         <button>
-                            <Link to={`/editclublist/${club.id}`}></Link>Update
+                            <Link to={`/editclublist/${club.id}`}>Update</Link>
                         </button>
 
                     </>
@@ -64,7 +65,7 @@ function ClubDetails() {
 
 
         </div>
-
+        </div>
     );
 }
 export default ClubDetails;

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';  
 import { Link } from 'react-router-dom';
@@ -37,10 +38,11 @@ function Search() {
           placeholder="Search for a club..."
         />
         <button className='search-btn' onClick={handleSearch}>
-          <FontAwesomeIcon icon={faSearch} />
+      
         </button>
+        
       </div>
-      <div className="clubList" style={{ position: 'absolute', top: '70px', left: 0, right: 0 }}>
+        <div className="clubList" style={{ position: 'absolute', top: '70px', left: 0, right: 0 }}>
         {searchResult.map((club) => (
           <div className="Club box" key={club.id}>
             <Link to={`/clubs/${club.id}`}>
@@ -54,4 +56,4 @@ function Search() {
 }
 
       
-export default Search;
+export default Search; 

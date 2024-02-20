@@ -89,3 +89,14 @@ body {
   background-color: #6c1111;
 }
 
+.clubList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Club {
+  width: 200px; /* İstediğiniz genişliği ayarlayabilirsiniz */
+  margin: 10px; /* Boşlukları ayarlayabilirsiniz */
+  text-align: center;
+}

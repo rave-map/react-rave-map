@@ -1,8 +1,15 @@
 /* Reset default margin and padding */
-body, h1, h2, h3, p, ul, li {
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
+
 
 /* Body styles with background image */
 body {
@@ -20,72 +27,126 @@ body {
   left: 0;
   right: 0;
   z-index: 999;
-  width: 100%; /* Ensure the navbar takes the full width of the viewport */
+  width: 100%;
+  /* Ensure the navbar takes the full width of the viewport */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(51, 51, 51, 0.7);
+  background-color: rgba(51, 51, 51, 0.212);
   color: #450b0b;
   padding: 1rem;
 }
 
 .logo {
-  flex: 1; /* Let the logo take the available space */
-  text-align: center;
+  flex: 5;
+  text-align: left;
 }
 
 .logo img {
-  width: 30px; /* Adjust the width of the logo as needed */
+  width: 40px;
+  /* Adjust the width of the logo as needed */
   height: auto;
-  cursor: pointer; /* Make the logo clickable */
+  cursor: pointer;
+  /* Make the logo clickable */
 }
 
 /* Search bar styles */
 .search-bar {
   display: flex;
   align-items: center;
+  position: relative; /* Set position relative */
 }
 
 .search-bar input {
   flex: 1;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
+  padding: 0.1rem;
+  border: 1px solid #f23a3a5e;
   border-radius: 4px;
   font-size: 1rem;
-  max-width: 100px
+  max-width: 70px;
+  background-color: #f23a3a5e;
+  transition: transform 0.3s ease; /* Add transition effect */
+  outline: none; 
 }
 
 .search-btn {
-  background-color: #000000;
-  color: #811d1d66;
+  background-color: #ba010187;
+  color: #360c0c99;
   border: none;
   border-radius: 4px;
-  padding: 0.5rem;
+  padding: 0.2rem;
   cursor: pointer;
 }
-  .HomePage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Adjust as needed */
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  .buttons {
-    margin-top: 25px; /* Adjust as needed */
-  }
-  
 
-  button {
-    margin: 0 10px;
-    padding: 15px 20px;
-  }
-  
-
+/* Adjust the search button on hover */
 .search-btn:hover {
-  background-color: #7f1111;
+  background-color: #d60000; /* Darker red on hover */
 }
 
+.HomePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Adjust as needed */
+}
+
+.container {
+  text-align: center;
+}
+
+button {
+  margin: 0 2px;
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: #270808;
+  background-color: #740808d6; /* Dark background color */
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(168, 2, 2, 0.208); /* Shadow effect */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #c1111171; /* Darker background color on hover */
+  transform: translateY(-2px); /* Lift the button slightly on hover */
+  box-shadow: 0 0 0 1px #d41a26;
+}
+
+.searchList {
+  position: absolute;
+  top: calc(100% + 5px); /* Adjust to give space between input and search list */
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Ensure the search list appears above other elements */
+}
+
+/* Style search list items similarly to buttons */
+.searchList .Club.box {
+  margin: 5px 0;
+}
+
+.searchList .Club.box a {
+  display: block;
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: #270808;
+  background-color: #740808d6; /* Dark background color */
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(168, 2, 2, 0.208); /* Shadow effect */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.searchList .Club.box a:hover {
+  background-color: #c1111171; /* Darker background color on hover */
+  transform: translateY(-2px); /* Lift the button slightly on hover */
+  box-shadow: 0 0 0 1px #d41a26;
+}
+
+.show-search-list .search-bar input {
+  transform: translateY(30px); /* Adjust to move the input down */
+}

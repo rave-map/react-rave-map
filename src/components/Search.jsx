@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';  
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +9,7 @@ function Search() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResult, setSearchResult] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [showInput, setShowInput] = useState(false);
 
   useEffect(() => {
     axios.get('https://rave-map-backend-server.adaptable.app/clubs')
@@ -45,23 +46,52 @@ function Search() {
     setSearchResult(result);
   };
 
+  const toggleInput = () => {
+    setShowInput(!showInput);
+    setShowSuggestions(false); // Close suggestions when toggling input
+  };
+
   const handleClubClick = () => {
     setShowSuggestions(false); // Close suggestions when a club is clicked
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
+  useEffect(() => {
+    // Function to close suggestions and toggle when clicking anywhere outside the search area
+    const handleClickOutside = (e) => {
+      if (!e.target.closest('.search-bar')) {
+        setShowSuggestions(false);
+        setShowInput(false);
+      }
+    };
+
+    document.body.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.body.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   return (
     <div>
       <div className='search-bar'>
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search for a club..."
-        />
-        <button className='search-btn' onClick={handleSearch}>
-      
+        {showInput && (
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyPress={handleKeyPress} // Attach event listener here
+            placeholder="Search for a club..."
+          />
+        )}
+        <button className='search-btn' onMouseDown={toggleInput}>
+          <FontAwesomeIcon icon={faSearch} />
         </button>
-        
       </div>
       {showSuggestions && (
         <div className="searchList">
@@ -78,5 +108,4 @@ function Search() {
   );
 }
 
-      
-export default Search; 
+export default Search;

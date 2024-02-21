@@ -17,8 +17,8 @@ function NavBar() {
 
       </div>
       <div className="search-bar">
-       
-        <Search/>
+         {/* Render the Search component */}
+        <Search />
       </div>
       <div className="menu">
         {/*Your menu items */}

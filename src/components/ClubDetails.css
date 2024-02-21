@@ -1,6 +1,49 @@
+
+
 /* ClubDetails.css */
 
-.container {
+
+.ClubDetailsContainer {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.ClubDetailsHeader {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.ClubDetailsPhotos img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.LocationInfo,
+.MusicStyleInfo,
+.GoogleMapInfo,
+.HintInfo {
+    margin-bottom: 15px;
+}
+
+.ClubDetailsActions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.ClubDetailsActions button {
+    margin: 0 5px;
+}
+
+  
+ 
+
+
+
+
+/*.container {
     max-width: 800px;
     margin: 0 auto;
   }
@@ -47,4 +90,4 @@
     color: #fff;
     margin-left: 10px;
   }
-  
+  */

@@ -6,10 +6,10 @@ import HomePage from './components/HomePage'
 import { Route, Routes } from 'react-router-dom'
 import NavBar from './components/Navbar'
 import ClubDetails from "./components/ClubDetails"
-import 'bootstrap/dist/css/bootstrap.min.css'
-
 import EditClubList from './components/EditClubList'
 import Footer from './components/Footer'
+
+
 function App() {
   return (
     <div className="App">

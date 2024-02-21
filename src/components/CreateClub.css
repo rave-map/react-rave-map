@@ -3,9 +3,10 @@ body {
     background-color: #f4f4f4;
   }
   
-  .container {
+  .details-container {
     max-width: 600px;
     margin-top: 50px;
+    font-size: 20px;
   }
   
   .form-label {

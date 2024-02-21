@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 
 import "./Clublist.css";
@@ -23,7 +23,7 @@ function ClubList(props) {
   }, []);
 
   return (
-    
+
     <div className="clubList-container">
       {clubs.map((club) => (
         <div key={club.id} className="club-card">
@@ -31,9 +31,10 @@ function ClubList(props) {
           <div className="club-info">
             <h3>{club.name}</h3>
             <p>{club.description}</p>
-            <Link to={`/clubs/${club.id}`} className="club-detail-link">
-              Detail
+            <Link to={`/clubs/${club.id}`}>
+              <button>details</button>
             </Link>
+
           </div>
         </div>
       ))}

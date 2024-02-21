@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, Link, useNavigate } from 'react-router-dom';
 
-import "./ClubDetails.css";
 
 
 function ClubDetails() {
@@ -42,11 +41,11 @@ function ClubDetails() {
     };
 
     return (
-        <div className="container my-5 text-center">
+        <div className="details-container">
         {club === null ? (
           <p>Loading...</p>
         ) : (
-          <>
+           <div >
             <h1>{club.name}</h1>
             <p>{club.location}</p>
             <p>{club.musicStyle}</p>
@@ -54,13 +53,15 @@ function ClubDetails() {
             <p>{club.hint}</p>
             <p>{club.imageURL}</p>
   
-            <button onClick={deleteClub} className="btn btn-danger my-3">
+            <button onClick={deleteClub} >
               Delete Club
             </button>
-            <Link to={`/editclublist/${club.id}`} className="btn btn-primary mx-2 my-3">
-              Update
+           
+            <Link to={`/editclublist/${club.id}`} >
+            <button> Update</button>
             </Link>
-          </>
+           
+            </div>
         )}
       </div>
     );

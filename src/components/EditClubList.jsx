@@ -4,19 +4,16 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./EditClubList.css";
 
 
-
  function EditClubList(){
     const API_URL= "https://rave-map-backend-server.adaptable.app/clubs"
-
     const { id } = useParams();
     const navigate = useNavigate();
-
     const [name, setName] = useState("");
     const [location, setLocation] = useState("");
     const [musicStyle, setMusicStyle] = useState("");
-
-
-
+    const [ hint , setHint]= useState("");
+    const [ imageURL, setImageURL ]= useState("");
+    const [ googleMaps, setGoogelMaps ]= useState("");
     useEffect(() => {
         axios.get(`${API_URL}/${id}`)
             .then((response) => {
@@ -29,7 +26,6 @@ import "./EditClubList.css";
                 console.log(error);
             });
     }, [id]);
-
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const updatedDetails = {
@@ -37,7 +33,6 @@ import "./EditClubList.css";
             location: location,
             musicStyle: musicStyle
         };
-
         axios.put(`${API_URL}/${id}`, updatedDetails)
             .then((response) => {
                 navigate(`/clubs`);
@@ -47,7 +42,6 @@ import "./EditClubList.css";
                 console.log(error);
             });
     };
-
     /*const deleteClub = () => {
         axios.delete(`${API_URL}/clubs/${clubId}`)
             .then((response) => {
@@ -58,7 +52,6 @@ import "./EditClubList.css";
                 console.log(error);
             });
     };*/
-
     return (
         <div className="EditClubPage">
             <h3>Edit the Club</h3>
@@ -84,11 +77,30 @@ import "./EditClubList.css";
                     value={musicStyle}
                     onChange={(e) => setMusicStyle(e.target.value)}
                 />
+                <label>Hint:</label>
+                <input
+                    type="text"
+                    name="location"
+                    value={hint}
+                    onChange={(e) => setHint(e.target.value)}
+                />
+                <label>İmage URL:</label>
+                <input
+                    type="text"
+                    name="location"
+                    value={imageURL}
+                    onChange={(e) => setImageURL(e.target.value)}
+                />
+                <label>Googel Maps:</label>
+                <input
+                    type="text"
+                    name="location"
+                    value={googleMaps}
+                    onChange={(e) => setGoogelMaps(e.target.value)}
+                />
                 <button type="submit">Update Club</button>
             </form>
-            
         </div>
     );
 }
-
 export default EditClubList;

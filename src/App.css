@@ -1,6 +1,4 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 body,
 h1,
@@ -9,168 +7,209 @@ h3,
 p,
 ul,
 li {
-  margin: 0;
+  margin: 0px;
   padding: 0;
-  
-}
-h1 {
-
 }
 
 /* Body styles with background image */
 body {
- margin: 0;
- padding: 0;
+  margin: 36px;
+  padding: 0;
   background-image: url('/bg.JPG');
   background-size: cover;
   background-position: center;
-  font-family: 'Orbitron', sans-serif;
-}
+  font-family: 'Share Tech Mono', monospace;}
 
 /* Navbar styles */
 .navbar {
- position: fixed;
- top: 0;
- left: 0;
- right: 0;
- z-index: 999;
- width: 100%;
- /* Ensure the navbar takes the full width of the viewport */
- display: flex;
- justify-content: space-between;
- align-items: center;
- background-color: rgba(51, 51, 51, 0.212);
- color: #450b0b;
- padding: 1rem;
-}
-.logo {
- flex: 5;
- text-align: left;
-}
-.logo img {
- width: 40px;
- /* Adjust the width of the logo as needed */
- height: auto;
- cursor: pointer;
- /* Make the logo clickable */
-}
-/* Search bar styles */
-.search-bar {
- display: flex;
- align-items: center;
- position: relative; /* Set position relative */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.212);
+  color: #450b0b;
+  padding: 0.1rem;
 }
 
+.logo {
+  flex: 5;
+  text-align: left;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Search bar styles */
 .search-bar {
   display: flex;
   align-items: center;
-  position: relative; /* Set position relative */
+  position: relative;
 }
+
 .search-bar input {
-  flex: 1;
-  padding: 0.1rem;
-  border: 1px solid #f23a3a5e;
-  border-radius: 4px;
- font-size: 1rem;
- max-width: 70px;
- background-color: #f040405e;
- transition: transform 0.3s ease; /* Add transition effect */
- outline: none; 
+ 
+    background-color: #ba010187;
+    color: #00000099;
+    border: none;
+    border-radius: 8px;
+    padding: 0.3rem; /* Adjust padding */
+    cursor: pointer;
 }
-
-
-
-
-
+.search-bar input:hover {
+  background-color: #d600006c;
+}
 .search-btn {
- background-color: #ba010187;
- color: #360c0c99;
- border: none;
- border-radius: 4px;
- padding: 0.2rem;
- cursor: pointer;
+  background-color: #ba010187;
+  color: #360c0c99;
+  border: none;
+  border-radius: 8px;
+  padding: 0.3rem; /* Adjust padding */
+  cursor: pointer;
+  margin-right: 20px;
 }
+
 /* Adjust the search button on hover */
 .search-btn:hover {
- background-color: #d60000; /* Darker red on hover */
+  background-color: #d600006c;
 }
+
+/* Homepage styles */
 .HomePage {
- display: flex;
- justify-content: center;
- align-items: center;
- height: 100vh;
- /* Adjust as needed */
-}
-.container {
- text-align: center;
-}
-button {
- margin: 0 2px;
- padding: 8px 15px;
- border-radius: 10px;
- color: #270808;
- background-color: #740808d6; /* Dark background color */
- border: none;
- font-size: 16px;
- cursor: pointer;
- box-shadow: 0 4px 6px rgba(168, 2, 2, 0.208); /* Shadow effect */
- transition: background-color 0.3s, color 0.3s, transform 0.3s;
-}
-button:hover {
- background-color: #c1111171; /* Darker background color on hover */
- transform: translateY(-2px); /* Lift the button slightly on hover */
- box-shadow: 0 0 0 1px #d41a26;
-}
-.searchList {
- position: absolute;
- top: calc(100% + 5px); /* Adjust to give space between input and search list */
- left: 0;
- width: 100%;
- z-index: 999; /* Ensure the search list appears above other elements */
-}
-/* Style search list items similarly to buttons */
-.searchList .Club.box {
- margin: 5px 0;
-}
-.searchList .Club.box a {
- display: block;
- padding: 8px 15px;
- border-radius: 10px;
- color: #270808;
- background-color: #740808d6; /* Dark background color */
- border: none;
- font-size: 16px;
- cursor: pointer;
- text-decoration: none;
- box-shadow: 0 4px 6px rgba(168, 2, 2, 0.208); /* Shadow effect */
- transition: background-color 0.3s, color 0.3s, transform 0.3s;
-}
-.searchList .Club.box a:hover {
- background-color: #c1111171; /* Darker background color on hover */
- transform: translateY(-2px); /* Lift the button slightly on hover */
- box-shadow: 0 0 0 1px #d41a26;
-}
-.show-search-list .search-bar input {
-  transform: translateY(30px); /* Adjust to move the input down */
-}
-
-h1 {
-  position: absolute; /* Position the h1 absolutely */
-  top: 160px; /* Align the h1 closer to the top */
-  left: 50%; /* Align the h1 to the center horizontally */
-  transform: translateX(-50%); /* Adjust to center horizontally */
-  margin: 0;
-  font-size: 24px;
-}
-.clubList {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.Club {
-  width: 200px; /* İstediğiniz genişliği ayarlayabilirsiniz */
-  margin: 10px; /* Boşlukları ayarlayabilirsiniz */
+.container {
   text-align: center;
-  background-color: #d60000; /* Darker red on hover */
+}
+
+/* Button styles */
+button {
+  margin: 0 2px;
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: #270808;
+  background-color: #740808d6;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(168, 2, 2, 0.208);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #c1111171;
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px #d41a26;
+}
+
+/* Search list styles */
+.searchList {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+ 
+}
+
+/* Style search list items */
+.searchList .Club.box {
+  margin: 5px;
+}
+
+.searchList .Club.box a {
+  display: block;
+  padding: 6px 15px;
+  border-radius: 8px;
+  color: #000000;
+  background-color: #740808d6;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.searchList .Club.box a:hover {
+  background-color: #f91d1d71;
+  transform: translateY(-2px);
+}
+.details-container{
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Adjust height as needed */
+  border-radius: 3px;
+}
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+  .logo img {
+    width: 30px; /* Adjust logo size */
+  }
+
+  /* Adjust search bar input and button styles for smaller screens */
+  .search-bar input {
+    padding: 0.4rem; /* Adjust padding */
+    font-size: 14px; /* Decrease font size */
+  }
+
+  .search-btn {
+    padding: 0.4rem; /* Adjust padding */
+  }
+
+  /* Adjust homepage styles for smaller screens */
+  .HomePage {
+    padding: 0.5rem; /* Adjust padding */
+  }
+
+
+  /* Adjust search list styles for smaller screens */
+  .searchList {
+    top: calc(100% + 10px); /* Increase top position */
+  }
+
+  /* Adjust search list item styles for smaller screens */
+  .searchList .Club.box a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #7408082e;
+  color: #63080893;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+  color: #80090993;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer :hover {
+  color: #d41a26;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding: 0.5rem;
+  }
 }

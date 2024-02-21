@@ -1,9 +1,8 @@
 function Footer(){
     return (
         <div className="footer">
-            <h3>Find us on GitHub! </h3>
-
-        </div>
+      <p>Find us on GitHub: <a href="https://github.com/rave-map/react-rave-map">Project Repository</a></p>
+    </div>
     )
 
 

@@ -2,21 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
 h1 {
-
+  position: absolute; /* Position the h1 absolutely */
+  top: 160px; /* Align the h1 closer to the top */
+  left: 50%; /* Align the h1 to the center horizontally */
+  transform: translateX(-50%); /* Adjust to center horizontally */
+  margin: 0; /* Remove default margin */
+  font-size: 1.3em;
 }
-
 /* Body styles with background image */
 body {
   margin: 0;
@@ -25,6 +18,7 @@ body {
   background-size: cover;
   background-position: center;
   font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
 }
 
 /* Navbar styles */
@@ -77,7 +71,7 @@ body {
 }
 
 .search-btn {
-  background-color: #ba010187;
+  background-color: #ba0101b1;
   color: #360c0c99;
   border: none;
   border-radius: 4px;
@@ -158,11 +152,3 @@ button:hover {
   transform: translateY(30px); /* Adjust to move the input down */
 }
 
-h1 {
-  position: absolute; /* Position the h1 absolutely */
-  top: 160px; /* Align the h1 closer to the top */
-  left: 50%; /* Align the h1 to the center horizontally */
-  transform: translateX(-50%); /* Adjust to center horizontally */
-  margin: 0; /* Remove default margin */
-  font-size: 24px;
-}

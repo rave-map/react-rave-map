@@ -7,10 +7,10 @@ import CreateClub from "./CreateClub";
 function HomePage() {
   return (
     <div className="HomePage">
-      <h1>Welcome to the Club Finder</h1>
+      <h1>Find Rave</h1>
       
       <Link to="/clubs">
-        <button>Go to Club List</button>
+        <button>Club List</button>
       </Link>
       <Link to="/createclub">
         <button>Create Club</button>

@@ -1,3 +1,7 @@
+
+  
+
+
 import React from "react";
 import Search from "./Search"; 
 import { Link } from "react-router-dom";
@@ -13,14 +17,14 @@ function NavBar() {
 
       </div>
       <div className="search-bar">
-        {/* Render the Search component */}
-        <Search />
+       
+        <Search/>
       </div>
       <div className="menu">
-        {/* Your menu items */}
+        {/*Your menu items */}
       </div>
     </nav>
   );
 }
 
-export default NavBar;
+export default NavBar;   

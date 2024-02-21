@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+
 
 
 const API_URL = "https://rave-map-backend-server.adaptable.app/clubs";
@@ -43,7 +45,86 @@ const handleClubAdded= (newClub) => {
 
 
   return (
-    <div className="CreateClub">
+
+    <Container>
+      <Row>
+        <Col md={6} className="mx-auto mt-5">
+          <h3>Add Club</h3>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="formName">
+              <Form.Label>Club Name:</Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formLocation">
+              <Form.Label>Location:</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                name="location"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+                required
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formMusicStyle">
+              <Form.Label>Music Style:</Form.Label>
+              <Form.Control
+                type="text"
+                name="musicStyle"
+                value={musicStyle}
+                onChange={(e) => setMusicStyle(e.target.value)}
+                required
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formGoogleMap">
+              <Form.Label>Google Map:</Form.Label>
+              <Form.Control
+                type="text"
+                name="googleMap"
+                value={googleMap}
+                onChange={(e) => setGoogleMap(e.target.value)}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formHint">
+              <Form.Label>Hint:</Form.Label>
+              <Form.Control
+                type="text"
+                name="hint"
+                value={hint}
+                onChange={(e) => setHint(e.target.value)}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formImageURL">
+              <Form.Label>Image URL:</Form.Label>
+              <Form.Control
+                type="text"
+                name="imageURL"
+                value={imageURL}
+                onChange={(e) => setImageURL(e.target.value)}
+              />
+            </Form.Group>
+
+            <Button variant="primary" type="submit">
+              ADD
+            </Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
+  );
+}
+   /* <div className="CreateClub">
       <h3>Add Club</h3>
       <form onSubmit={handleSubmit}>
         <label>Club Name:</label>
@@ -105,6 +186,6 @@ const handleClubAdded= (newClub) => {
   );
 
  
-}
+}*/
 
 export default CreateClub;

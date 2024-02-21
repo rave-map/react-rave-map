@@ -59,8 +59,9 @@ function Search() {
           placeholder="Search for a club..."
         />
         <button className='search-btn' onClick={handleSearch}>
-          <FontAwesomeIcon icon={faSearch} />
+      
         </button>
+        
       </div>
       {showSuggestions && (
         <div className="searchList">
@@ -77,4 +78,5 @@ function Search() {
   );
 }
 
-export default Search;
+      
+export default Search; 

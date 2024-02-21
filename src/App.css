@@ -81,6 +81,19 @@ body {
 
 /* Adjust the search button on hover */
 .search-btn:hover {
+  background-color: #6c1110;
+}
+
+.clubList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Club {
+  width: 200px; /* İstediğiniz genişliği ayarlayabilirsiniz */
+  margin: 10px; /* Boşlukları ayarlayabilirsiniz */
+  text-align: center;
   background-color: #d60000; /* Darker red on hover */
 }
 

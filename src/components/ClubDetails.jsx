@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, Link, useNavigate } from 'react-router-dom';
 
-
+import "./ClubDetails.css";
 
 
 function ClubDetails() {
@@ -42,31 +42,33 @@ function ClubDetails() {
     };
 
     return (
-        <div className="container d-flex justify-content-center align-items-center" style={{ height: '500px' }} >
-        <div className="ClubDetails">
-            {club === null
-                ? <p>Loading...</p>
-                : (
-                    <>
-                        <h1>{club.name}</h1>
-                        <p>{club.location}</p>
-                        <p>{club.musicStyle}</p>
-                        <p>{club.googleMap}</p>
-                        <p>{club.hint}</p>
-                        <p>{club.imageURL}</p>
-
-                        <button onClick={deleteClub}>Delete Club</button>
-                        <button>
-                            <Link to={`/editclublist/${club.id}`}>Update</Link>
-                        </button>
-
-                    </>
-                )}
-
-
-        </div>
-        </div>
+        <div className="container my-5 text-center">
+        {club === null ? (
+          <p>Loading...</p>
+        ) : (
+          <>
+            <h1>{club.name}</h1>
+            <p>{club.location}</p>
+            <p>{club.musicStyle}</p>
+            <p>{club.googleMap}</p>
+            <p>{club.hint}</p>
+            <p>{club.imageURL}</p>
+  
+            <button onClick={deleteClub} className="btn btn-danger my-3">
+              Delete Club
+            </button>
+            <Link to={`/editclublist/${club.id}`} className="btn btn-primary mx-2 my-3">
+              Update
+            </Link>
+          </>
+        )}
+      </div>
     );
+
+
+        
+        
+    
 }
 export default ClubDetails;
 

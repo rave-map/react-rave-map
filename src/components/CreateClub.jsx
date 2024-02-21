@@ -1,9 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 
+import "./CreateClub.css";
 
 const API_URL = "https://rave-map-backend-server.adaptable.app/clubs";
 
@@ -46,82 +46,85 @@ const handleClubAdded= (newClub) => {
 
   return (
 
-    <Container>
-      <Row>
-        <Col md={6} className="mx-auto mt-5">
-          <h3>Add Club</h3>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="formName">
-              <Form.Label>Club Name:</Form.Label>
-              <Form.Control
+    <div className="container">
+      <div className="row justify-content-center mt-5">
+        <div className="col-md-6">
+          <h3 className="text-center mb-4">Add Club</h3>
+          <form onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <label htmlFor="name" className="form-label">Club Name:</label>
+              <input
                 type="text"
-                name="name"
+                className="form-control"
+                id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
               />
-            </Form.Group>
+            </div>
 
-            <Form.Group controlId="formLocation">
-              <Form.Label>Location:</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                name="location"
+            <div className="mb-3">
+              <label htmlFor="location" className="form-label">Location:</label>
+              <textarea
+                className="form-control"
+                id="location"
+                rows="3"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
                 required
-              />
-            </Form.Group>
+              ></textarea>
+            </div>
 
-            <Form.Group controlId="formMusicStyle">
-              <Form.Label>Music Style:</Form.Label>
-              <Form.Control
+            <div className="mb-3">
+              <label htmlFor="musicStyle" className="form-label">Music Style:</label>
+              <input
                 type="text"
-                name="musicStyle"
+                className="form-control"
+                id="musicStyle"
                 value={musicStyle}
                 onChange={(e) => setMusicStyle(e.target.value)}
                 required
               />
-            </Form.Group>
+            </div>
 
-            <Form.Group controlId="formGoogleMap">
-              <Form.Label>Google Map:</Form.Label>
-              <Form.Control
+            <div className="mb-3">
+              <label htmlFor="googleMap" className="form-label">Google Map:</label>
+              <input
                 type="text"
-                name="googleMap"
+                className="form-control"
+                id="googleMap"
                 value={googleMap}
                 onChange={(e) => setGoogleMap(e.target.value)}
               />
-            </Form.Group>
+            </div>
 
-            <Form.Group controlId="formHint">
-              <Form.Label>Hint:</Form.Label>
-              <Form.Control
+            <div className="mb-3">
+              <label htmlFor="hint" className="form-label">Hint:</label>
+              <input
                 type="text"
-                name="hint"
+                className="form-control"
+                id="hint"
                 value={hint}
                 onChange={(e) => setHint(e.target.value)}
               />
-            </Form.Group>
+            </div>
 
-            <Form.Group controlId="formImageURL">
-              <Form.Label>Image URL:</Form.Label>
-              <Form.Control
+            <div className="mb-3">
+              <label htmlFor="imageURL" className="form-label">Image URL:</label>
+              <input
                 type="text"
-                name="imageURL"
+                className="form-control"
+                id="imageURL"
                 value={imageURL}
                 onChange={(e) => setImageURL(e.target.value)}
               />
-            </Form.Group>
+            </div>
 
-            <Button variant="primary" type="submit">
-              ADD
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+            <button type="submit" className="btn btn-primary">ADD</button>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 }
    /* <div className="CreateClub">

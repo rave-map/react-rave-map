@@ -1,0 +1,39 @@
+.EditClubPage {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+  }
+  
+  .EditClubPage h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .EditClubPage form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .EditClubPage label {
+    margin-bottom: 5px;
+  }
+  
+  .EditClubPage input {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  .EditClubPage button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 body,
-h1,
+
 h2,
 h3,
 p,
@@ -11,15 +11,18 @@ li {
   padding: 0;
 }
 
-/* Body styles with background image */
 body {
-  margin: 36px;
-  padding: 0;
+  margin: 36px; /* Adjusted to remove fixed margin */
+  padding: 100px;
   background-image: url('/bg.JPG');
   background-size: cover;
   background-position: center;
-  font-family: 'Share Tech Mono', monospace;}
-
+  font-family: 'Share Tech Mono', monospace;
+  min-height: 100vh; /* Ensure the body covers the entire viewport height */
+}
+.content-wrapper {
+  padding-bottom: 50px; /* Adjust as needed based on the footer height */
+}
 /* Navbar styles */
 .navbar {
   position: fixed;
@@ -62,6 +65,7 @@ body {
     border-radius: 8px;
     padding: 0.3rem; /* Adjust padding */
     cursor: pointer;
+    outline: none;
 }
 .search-bar input:hover {
   background-color: #d600006c;
@@ -81,12 +85,20 @@ body {
   background-color: #d600006c;
 }
 
-/* Homepage styles */
 .HomePage {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.buttons-container {
+  margin-top: 20px; /* Adjust the top margin to create space between h1 and buttons */
+}
+
+.buttons-container button {
+  margin: 5px; /* Add some margin around the buttons */
 }
 
 .container {
@@ -144,12 +156,32 @@ button:hover {
   background-color: #f91d1d71;
   transform: translateY(-2px);
 }
-.details-container{
+.details-container {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 100vh; /* Adjust height as needed */
-  border-radius: 3px;
+}
+
+.details-container > div {
+  background-color: #f91d1d38;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(208, 27, 27);
+}
+
+.details-container h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.details-container p {
+  margin-bottom: 5px;
+
+}.details-container :hover {
+
+  transform: translateY(-2px);
+
 }
 /* Responsive styles */
 @media only screen and (max-width: 768px) {
@@ -190,6 +222,10 @@ button:hover {
   }
 }
 .footer {
+  position: fixed; /* Fix the footer to the bottom of the viewport */
+  bottom: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
   padding: 1rem;
   background-color: #7408082e;

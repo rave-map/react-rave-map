@@ -27,7 +27,14 @@ function ClubList(props) {
     <div className="clubList-container">
       {clubs.map((club) => (
         <div key={club.id} className="club-card">
-          <img src="holder.js/100px180" alt={`Club ${club.id}`} />
+          <img src={club.imageURL} alt={`Club ${club.id}`}
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderTopLeftRadius: "10px",
+            borderTopRightRadius: "10px",
+          }} />
           <div className="club-info">
             <h3>{club.name}</h3>
             <p>{club.description}</p>

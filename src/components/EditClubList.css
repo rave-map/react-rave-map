@@ -1,39 +1,33 @@
 .EditClubPage {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-  }
-  
-  .EditClubPage h3 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .EditClubPage form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .EditClubPage label {
-    margin-bottom: 5px;
-  }
-  
-  .EditClubPage input {
-    margin-bottom: 15px;
-    padding: 8px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-  }
-  
-  .EditClubPage button {
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #a137375c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.EditClubPage label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+/* Edit page input styles */
+.EditClubPage input[type="text"] {
+  width: calc(100% - 16px); /* Adjust width to fit inside container */
+  padding: 8px; /* Keep padding consistent */
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 42, 42, 0.267);
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #ba010129; /* Same background color as buttons */
+  color: #fff; /* Change text color to white */
+  outline: none;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Add transition */
+}
+
+.EditClubPage input[type="text"]:hover {
+  background-color: #b7212142; /* Change hover background color */
+}
+
+.EditClubPage input[type="text"]:focus {
+  box-shadow: 0 0 0 1px #d41a2629; /* Add box-shadow on focus */
+}

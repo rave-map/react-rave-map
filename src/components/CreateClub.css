@@ -1,49 +1,58 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-  }
-  
-  .details-container {
-    max-width: 600px;
-    margin-top: 50px;
-    font-size: 20px;
-  }
-  
-  .form-label {
-    font-weight: bold;
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #8e1b1b44;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 10px; /* Apply border-radius to match the card */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow to match the card */
+  margin: 0 auto; /* Center horizontally */
+  max-width: 400px; /* Limit the maximum width of the container */
+}
+
+.container:hover {
+  background-color: #c1111149; /* Apply hover effect */
+}
+
+.form-control {
+  width: calc(100% - 16px); /* Adjust width to fit inside container */
+  padding: 8px; /* Keep padding consistent */
+  margin-bottom: 15px;
+  border: 1px solid rgba(236, 102, 102, 0.267);
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #a5808051;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #c1111149;
+}
+
+.btn-primary {
+  background-color: rgba(236, 102, 102, 0.267);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #c1111149;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 300px; /* Adjust maximum width for smaller screens */
   }
   
   .form-control {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    padding: 5px; /* Adjust padding for smaller screens */
   }
-  
-  .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .mb-3 {
-    margin-bottom: 15px;
-  }
-  
-  .mt-5 {
-    margin-top: 50px;
-  }
-  
+}

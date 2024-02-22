@@ -71,110 +71,109 @@ function CreateClub() {
 
   return (
     <div className="container">
-      <div className="row justify-content-center mt-5">
-        <div className="col-md-6">
-          <h3 className="text-center mb-4">Add Club</h3>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
-              <label htmlFor="name" className="form-label">
-                Club Name:
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
 
-            <div className="mb-3">
-              <label htmlFor="location" className="form-label">
-                Location:
-              </label>
-              <textarea
-                className="form-control"
-                id="location"
-                rows="3"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-                required
-              ></textarea>
-            </div>
 
-            <div className="mb-3">
-              <label htmlFor="musicStyle" className="form-label">
-                Music Style:
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="musicStyle"
-                value={musicStyle}
-                onChange={(e) => setMusicStyle(e.target.value)}
-                required
-              />
-            </div>
-
-            <div className="mb-3">
-              <label htmlFor="Image" className="form-label">
-                Image
-              </label>
-              <input
-                type="file"
-                className="form-control"
-                id="Image"
-                onChange={(e) => handleFileUpload(e)}
-              />
-            </div>
-
-            <div className="mb-3">
-              <label htmlFor="googleMap" className="form-label">
-                Google Map:
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="googleMap"
-                value={googleMap}
-                onChange={(e) => setGoogleMap(e.target.value)}
-              />
-            </div>
-
-            <div className="mb-3">
-              <label htmlFor="hint" className="form-label">
-                Hint:
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="hint"
-                value={hint}
-                onChange={(e) => setHint(e.target.value)}
-              />
-            </div>
-
-            <div className="mb-3">
-              <label htmlFor="imageURL" className="form-label">
-                Image URL:
-              </label>
-              <input
-                type="text"
-                className="form-control"
-                id="imageURL"
-                value={imageURL}
-                onChange={(e) => setImageURL(e.target.value)}
-              />
-            </div>
-
-            <button type="submit" className="btn btn-primary">
-              ADD
-            </button>
-          </form>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label">
+            Club Name:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
         </div>
-      </div>
+
+        <div className="mb-3">
+          <label htmlFor="location" className="form-label">
+            Location:
+          </label>
+          <textarea
+            className="form-control"
+            id="location"
+            rows="3"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            required
+          ></textarea>
+        </div>
+
+        <div>
+          <label htmlFor="musicStyle">
+            Music Style:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="musicStyle"
+            value={musicStyle}
+            onChange={(e) => setMusicStyle(e.target.value)}
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="Image" className="form-label">
+            Image
+          </label>
+          <input
+            type="file"
+            className="form-control"
+            id="Image"
+            onChange={(e) => handleFileUpload(e)}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="googleMap" className="form-label">
+            Google Map:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="googleMap"
+            value={googleMap}
+            onChange={(e) => setGoogleMap(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="hint">
+            Hint:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="hint"
+            value={hint}
+            onChange={(e) => setHint(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="imageURL" className="form-label">
+            Image URL:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="imageURL"
+            value={imageURL}
+            onChange={(e) => setImageURL(e.target.value)}
+          />
+        </div>
+
+        <button type="submit" >
+          ADD
+        </button>
+      </form>
     </div>
+
+
   );
 }
 

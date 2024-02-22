@@ -46,6 +46,14 @@ function ClubDetails() {
           <p>Loading...</p>
         ) : (
            <div >
+            <img src={club.imageURL} alt={`Club ${club.id}`}
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderTopLeftRadius: "10px",
+            borderTopRightRadius: "10px",
+          }} />
             <h1>{club.name}</h1>
             <p>{club.location}</p>
             <p>{club.musicStyle}</p>

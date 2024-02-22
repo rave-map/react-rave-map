@@ -7,7 +7,7 @@ function HomePage() {
   return (
     
     <div className="HomePage">
-      <h1>Find Rave</h1>
+      <h1 className="smokyBg">Rave <span className="Map">Map</span></h1>
       
       <div className="buttons-container">
         <Link to="/clubs">

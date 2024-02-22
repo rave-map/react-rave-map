@@ -5,7 +5,8 @@
 import React from "react";
 import Search from "./Search"; 
 import { Link } from "react-router-dom";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMusic } from "@fortawesome/free-solid-svg-icons";
 
 function NavBar() {
   return (
@@ -19,7 +20,7 @@ function NavBar() {
       <div className="search-bar">
         <Search />
       </div>
-      
+      <FontAwesomeIcon icon={faMusic} />
     </nav>
   );
 }

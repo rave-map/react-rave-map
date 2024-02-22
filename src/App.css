@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 body,
-
+h1,
 h2,
 h3,
 p,
@@ -9,6 +9,8 @@ ul,
 li {
   margin: 0px;
   padding: 0;
+  font-family: 'Share Tech Mono', monospace;
+
 }
 
 body {
@@ -91,10 +93,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+ 
+  margin-top: -80px; /* Adjust the margin-top to move the content up */
 }
 
 .buttons-container {
-  margin-top: 20px; /* Adjust the top margin to create space between h1 and buttons */
+  margin-top: 50px; /* Adjust the top margin to create space between h1 and buttons */
 }
 
 .buttons-container button {
@@ -204,11 +208,8 @@ button:hover {
     padding: 0.4rem; /* Adjust padding */
   }
 
-  /* Adjust homepage styles for smaller screens */
-  .HomePage {
-    padding: 0.5rem; /* Adjust padding */
-  }
-
+  
+  
 
   /* Adjust search list styles for smaller screens */
   .searchList {

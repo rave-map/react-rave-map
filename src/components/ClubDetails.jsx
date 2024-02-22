@@ -51,7 +51,7 @@ function ClubDetails() {
             <p>{club.musicStyle}</p>
             <p>{club.googleMap}</p>
             <p>{club.hint}</p>
-            <p>{club.imageURL}</p>
+           
   
             <button onClick={deleteClub} >
               Delete Club

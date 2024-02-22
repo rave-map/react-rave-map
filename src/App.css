@@ -42,14 +42,18 @@ body {
 }
 
 .logo {
-  flex: 5;
-  text-align: left;
+  text-align: center; /* Align logo in the center */
 }
 
 .logo img {
-  width: 40px;
+  width: 40px; /* Adjust logo size */
   height: auto;
   cursor: pointer;
+}
+
+.music-icon {
+  font-size: 24px; /* Adjust the font size to match the size of the search icon */
+  margin-left: 20px; 
 }
 
 /* Search bar styles */

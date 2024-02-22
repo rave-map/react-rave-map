@@ -1,28 +1,26 @@
-
-  
-
-
 import React from "react";
 import Search from "./Search"; 
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMusic } from "@fortawesome/free-solid-svg-icons";
+import MusicPlayer from "./MusicPlayer"; // Import the MusicPlayer component
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function NavBar() {
   return (
     <nav className="navbar">
+       <div className="music-icon">
+        <MusicPlayer />
+      </div>
       <div className="logo">
-      <Link to="/">
+        <Link to="/">
           <img src="bear-logo.png" alt="Logo" />
         </Link>
-
+       
       </div>
       <div className="search-bar">
         <Search />
       </div>
-      <FontAwesomeIcon icon={faMusic} />
+      
     </nav>
   );
 }
 
-export default NavBar;   
+export default NavBar;

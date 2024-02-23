@@ -90,7 +90,7 @@ import "./EditClubList.css";
     };*/
     return (
         <div className="EditClubPage">
-            <h3>Edit the Club</h3>
+         
             <form onSubmit={handleFormSubmit}>
                 <label>Name:</label>
                 <input

@@ -1,9 +1,14 @@
 .EditClubPage {
-  margin-top: 40px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #a137375c;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #8e1b1b44;
+  padding: 50px;
+
+  border-radius: 10px; /* Apply border-radius to match the card */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow to match the card */
+  margin: 60px auto; /* Center horizontally */
+  max-width: 400px; 
 }
 
 .EditClubPage label {
